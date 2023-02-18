@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(./pexels-pixabay-434337.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .a{
+            width: 50px;
+            height: 40px;
+            font-size: 30px;
+            border-radius: 30%;
+        }
+        #input{
+            width: 210px;
+            height: 60px;
+            font-size: 30px;
+            background-color: black;
+            color: white;
+            border: 8px groove rgb(244, 184, 184);
+        }
+        div
+        {
+            width: 235px;
+            text-align: center;
+            height: 305px;
+            background-color: rgba(108, 101, 101, 0.16);
+            box-shadow: 2px 2px 2px black;
+        }
+        .b{
+            width: 104px;
+            height: 40px;
+            font-size: 30px;
+            border-radius: 30%;
+        }
+        .a:active{
+            background-color:blue;
+        }
+        .b:active{
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <form name="cform">
+        <table>
+            <tr>
+                <td colspan="4">
+                    <input  name="ans" id="input">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="1" onclick="cform.ans.value+='1'" class="a" onmousedown="clicksound()">
+                </td>
+                <td>
+                    <input type="button" value="2" onclick="cform.ans.value+='2'" class="a"  onmousedown="clicksound()">
+                </td>
+                <td>
+                    <input type="button" value="3" onclick="cform.ans.value+='3'" class="a"  onmousedown="clicksound()">
+                </td><td>
+                    <input type="button" value="+" onclick="cform.ans.value+='+'" class="a" onmousedown="clicksound()">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="4" onclick="cform.ans.value+='4'" class="a" onmousedown="clicksound()">
+                </td>
+                <td>
+                    <input type="button" value="5" onclick="cform.ans.value+='5'" class="a" onmousedown="clicksound()">
+                </td>
+                <td>
+                    <input type="button" value="6" onclick="cform.ans.value+='6'" class="a" onmousedown="clicksound()">
+                </td><td>
+                    <input type="button" value="-" onclick="cform.ans.value+='-'" class="a" onmousedown="clicksound()">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="7" onclick="cform.ans.value+='7'" class="a" onmousedown="clicksound()">
+                </td>
+                <td>
+                    <input type="button" value="8" onclick="cform.ans.value+='8'" class="a" onmousedown="clicksound()">
+                </td>
+                <td>
+                    <input type="button" value="9" onclick="cform.ans.value+='9'" class="a" onmousedown="clicksound()">
+                </td><td>
+                    <input type="button" value="*" onclick="cform.ans.value+='*'" class="a" onmousedown="clicksound()">
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <input type="button" value="%" onclick="cform.ans.value+='%'" class="a" onmousedown="clicksound()">
+                </td>
+                <td>
+                    <input type="button" value="0" onclick="cform.ans.value+='0'" class="a" onmousedown="clicksound()">
+                </td>
+                <td>
+                    <input type="button" value="." onclick="cform.ans.value+='.'" class="a" onmousedown="clicksound()">
+                </td><td>
+                    <input type="button" value="/" onclick="cform.ans.value+='/'" class="a" onmousedown="clicksound()">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="=" onclick="cform.ans.value=eval(cform.ans.value)" class="b" onmousedown="clicksound()">
+                </td>
+                <td colspan="2">
+                    <input type="button" value="c" onclick="cform.ans.value=' '" class="b" onmousedown="clicksound()">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<script>
+    function clicksound()
+    {
+        var clksound=new Audio()
+        clksound.src="sound.mp3"
+        clksound.play()
+    }
+</script>
+</body>
+</html>
